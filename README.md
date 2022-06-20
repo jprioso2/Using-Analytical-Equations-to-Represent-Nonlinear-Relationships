@@ -1,0 +1,1 @@
+# Using-Analytical-Equations-to-Represent-Nonlinear-Relationships
