@@ -1,0 +1,3 @@
+instructions on using Macros as an input file in Vensim (DSS) models
+
+https://www.vensim.com/documentation/macros.html)
