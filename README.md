@@ -1,5 +1,9 @@
 # Using-Analytical-Equations-to-Represent-Nonlinear-Relationships
 
+# Vensim Macros
+
+The folder Vensim Macros includes the Macros to add in the Vensim Models. Each Macro includes the conventional nonlinear equations and the version of the nonlinear equations with reference points.
+
 # Python script to replace existing table function
 
 This supplementary appendix explains how to replace an existing table function using one of the six analytical equations discussed in the main manuscript using a Python 3 script we wrote specifically for this task. The code for conducting this analysis is attached in the supplementary materials as: ShapeNonlinearFunction.py. Using information about the existing table function, the script helps identify the analytical equation with an internal reference point (r_x, r_y) that best represents the nonlinear relationship.
