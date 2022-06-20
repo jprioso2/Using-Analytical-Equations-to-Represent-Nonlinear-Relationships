@@ -102,10 +102,10 @@ import fnmatch
 #%% Read Txt file
 
 """ Identified number of Inputs (tables funtions) in the folder. 
-Copy the path of the folder were you have the txt files. Include it between 
+Copy the path of the folder where you have the txt files. Include it between 
 " " and using a r before. r"C:\..."
 """
-dir_path = r"C:\Users\z5288680\Dropbox\Nonlinear functions\Document\Documents submitted to SD Review Dec 2021\2nd revision\Python txt\WordDynamics"
+dir_path = r"C:\"
 count = len(fnmatch.filter(os.listdir(dir_path), 'Input*'))
 
 Results = list()
