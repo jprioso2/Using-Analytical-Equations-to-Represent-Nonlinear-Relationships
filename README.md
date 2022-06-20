@@ -1,4 +1,9 @@
 # Using-Analytical-Equations-to-Represent-Nonlinear-Relationships
+Juan Ríos-Ocampo a * and Michael Shayne Gary a
+a UNSW Business School, University of New South Wales, Sydney NSW 2052, Australia
+*Correspondence to: Juan Ríos-Ocampo. E-mail: j.rios_ocampo@unsw.edu.au
+
+
 
 # Vensim Macros
 
