@@ -1,0 +1,8 @@
+x	y	reference_point_x_value	reference_point_y_value
+0	1.04	10	0.85
+10	0.85		
+20	0.6		
+30	0.3		
+40	0.15		
+50	0.05		
+60	0.02
