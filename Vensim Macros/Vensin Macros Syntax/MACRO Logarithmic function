@@ -1,0 +1,21 @@
+:MACRO:LogFunction(input,a,b)
+LogFunction=
+a+b*LN(input)
+	~	Conventional Logarithmic equation
+	~	input independent variable
+		a parameter 
+		b parameter
+	|
+
+:END OF MACRO:
+:MACRO:LogFunctionRP(input,rx,ry,a)
+LogFunctionRP=
+a+((ry-a)/(LN(rx)))*LN(input)
+	~	Version of Logarithmic equation with reference point
+	~	input independent variable
+		a parameter 
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:

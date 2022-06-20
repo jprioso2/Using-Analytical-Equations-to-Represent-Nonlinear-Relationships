@@ -1,0 +1,29 @@
+:MACRO:GenLogisticEquation(input,A,K,C,Q,beta,M)
+GenLogisticEquation=
+A + ((K-A)/(C+Q*EXP(beta*(input-M))))
+	~	Conventional Generalized logistic equation with four parameters
+	~	A minimum 
+		K maximum
+		C parameter		
+		Q parameter
+		beta growth rate 
+		M inflection point 
+		input independent variable	|
+:END OF MACRO:
+
+:MACRO:GenLogisticEquationRP(input,rx,ry,A,K,C,Q,M)
+GenLogisticEquationRP=
+A + ((K-A)/(C+Q*((A*(C-1)+K-ry*C)/(Q*(ry-A)))^((input-M)/(rx-M))))
+	~	Version of Generalized logistic equation with four parameters and reference points
+	~	A minimum
+		K maximum
+		C parameter		
+		Q parameter
+		M imflection point 
+		input independent variable
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:
+

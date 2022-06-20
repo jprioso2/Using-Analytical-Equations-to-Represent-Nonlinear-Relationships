@@ -1,0 +1,23 @@
+:MACRO:QuadraticFunction(input,a,b,c)
+QuadraticFunction=
+a+b*input+c*(input^2)
+	~	Conventional Quadratic equation
+	~	input independent variable
+		a parameter 
+		b parameter
+		c parameter
+	|
+
+:END OF MACRO:
+:MACRO:QuadraticFunctionRP(input,rx,ry,a,b)
+QuadraticFunctionRP=
+a+b*input+((ry-a-b*rx)/(rx^2))*input^2
+	~	Version of Quadratic equation with reference point
+	~	input independent variable
+		a parameter 
+		b parameter
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:

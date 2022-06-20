@@ -1,0 +1,23 @@
+:MACRO:PowerFunction(input,a,c,beta)
+PowerFunction=
+a*input^beta+c
+	~	Conventional Power equation
+	~	input independent variable
+		a parameter 
+		c parameter
+		beta growth rate
+	|
+
+:END OF MACRO:
+:MACRO:PowerFunctionRP(input,rx,ry,a,c)
+PowerFunctionRP=
+a*input^(LN((ry-c)/(a))/(LN(rx)))+c
+	~	Version of Power equation with reference point
+	~	input independent variable
+		a parameter 
+		c parameter
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:

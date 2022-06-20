@@ -1,0 +1,25 @@
+:MACRO:ExpFunction(input,d,c,theta)
+ExpFunction=
+d*EXP(theta*input)+c
+	~	Conventional Exponential equation
+	~	input independent variable
+		d parameter 
+		c parameter
+		theta growth rate
+	|
+
+:END OF MACRO:
+
+:MACRO:ExpFunctionRP(input,rx,ry,d,c)
+ExpFunctionRP=
+d*((ry-c)/(d))^(input/rx)+c
+	~	Version of Exponential equation with reference point 
+	~	input independent variable
+		d parameter 
+		c parameter
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:
+

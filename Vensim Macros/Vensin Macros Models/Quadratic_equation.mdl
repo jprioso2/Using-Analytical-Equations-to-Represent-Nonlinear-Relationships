@@ -1,0 +1,166 @@
+{UTF-8}
+
+:MACRO:QuadraticFunction(input,a,b,c)
+QuadraticFunction=
+a+b*input+c*(input^2)
+	~	Conventional Quadratic equation
+	~	input independent variable
+		a parameter 
+		b parameter
+		c parameter
+	|
+
+:END OF MACRO:
+:MACRO:QuadraticFunctionRP(input,rx,ry,a,b)
+QuadraticFunctionRP=
+a+b*input+((ry-a-b*rx)/(rx^2))*input^2
+	~	Version of Quadratic equation with reference point
+	~	input independent variable
+		rx reference point x-axis
+		ry reference point y-axis
+		a parameter 
+		b parameter
+	|
+
+:END OF MACRO:
+Quadratic function with Reference point=
+	QuadraticFunctionRP(Input,rx,ry,a,b)
+	~	
+	~		|
+
+c=
+	1
+	~	
+	~		|
+
+Conventional Quadratic function=
+	QuadraticFunction(Input,a,b,c)
+	~	
+	~		|
+
+rx=
+	20
+	~	
+	~		|
+
+ry=
+	250
+	~	
+	~		|
+
+b=
+	0.5
+	~	
+	~		|
+
+a=
+	1
+	~	
+	~		|
+
+increase rate=
+	1
+	~	
+	~		|
+
+Input= INTEG (
+	increase rate,
+		1)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,100,0
+10,1,Input,433,320,46,20,3,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,2,48,263,317,25,15,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,3,5,2,100,0,0,22,0,192,0,-1--1--1,,1|(309,317)|
+1,4,5,1,4,0,0,22,0,192,0,-1--1--1,,1|(365,317)|
+11,5,0,337,317,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,6,increase rate,337,355,75,30,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,7,Conventional Quadratic function,585,564,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,8,1,7,1,0,0,0,0,192,0,-1--1--1,,1|(454,458)|
+10,9,a,535,400,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,10,b,625,395,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,11,9,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,12,10,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,13,Quadratic function with Reference point,625,222,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,14,1,13,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,15,10,13,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,16,9,13,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,17,rx,654,129,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,18,ry,760,169,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,19,17,13,1,0,0,0,0,192,0,-1--1--1,,1|(627,170)|
+1,20,18,13,1,0,0,0,0,192,0,-1--1--1,,1|(717,199)|
+12,21,0,1110,332,246,202,8,79,0,0,1,0,0,0,0,0,0,0,0,0
+GRAPH
+10,22,c,738,464,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,23,22,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+///---\\\
+:GRAPH GRAPH
+:TITLE GRAPH
+:SCALE
+:VAR Modified Exponential function with Reference point
+:VAR Conventional modified exponential function
+:L<%^E!@
+1:currentQuadraticExpFunction.vdfx
+1:currentModExpFunction.vdfx
+4:Time
+5:Conventional Quadratic function
+9:currentQuadraticExpFunction
+19:100,0
+24:0
+25:100
+26:100
+23:0
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:0
+96:0
+97:0
+77:0
+78:0
+102:0
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Times New Roman|12||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1

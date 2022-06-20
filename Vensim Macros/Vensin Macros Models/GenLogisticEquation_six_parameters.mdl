@@ -1,0 +1,197 @@
+{UTF-8}
+:MACRO:GenLogisticEquation(input,A,K,C,Q,beta,M)
+GenLogisticEquation=
+A + ((K-A)/(C+Q*EXP(beta*(input-M))))
+	~	Conventional Generalized logistic equation with four parameters
+	~	input independent variable
+		A minimum 
+		K maximum
+		C parameter		
+		Q parameter
+		beta growth rate 
+		M inflection point
+	|
+
+:END OF MACRO:
+:MACRO:GenLogisticEquationRP(input,rx,ry,A,K,C,Q,M)
+GenLogisticEquationRP=
+A + ((K-A)/(C+Q*((A*(C-1)+K-ry*C)/(Q*(ry-A)))^((input-M)/(rx-M))))
+	~	Version of Generalized logistic equation with four parameters and reference points
+	~	input independent variable
+		rx reference point x-axis
+		ry reference point y-axis
+		A minimum
+		K maximum
+		C parameter		
+		Q parameter
+		M imflection point 
+		input independent variable
+	|
+
+:END OF MACRO:
+C=
+	1
+	~	
+	~		|
+
+Q=
+	1
+	~	
+	~		|
+
+GenLogisticEquation Reference point=
+	GenLogisticEquationRP(Input,rx,ry,A,K,C,Q,M)
+	~	
+	~		|
+
+Conventional GenLogisticEquation=
+	GenLogisticEquation(Input,A,K,C,Q,beta,M)
+	~	
+	~		|
+
+rx=
+	15
+	~	
+	~		|
+
+ry=
+	15
+	~	
+	~		|
+
+M=
+	40
+	~	
+	~		|
+
+beta=
+	-0.1
+	~	
+	~		|
+
+K=
+	100
+	~	
+	~		|
+
+A=
+	0
+	~	
+	~		|
+
+Rate=
+	1
+	~	
+	~		|
+
+Input= INTEG (
+	Rate,
+		1)
+	~	
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 100
+	~	Month
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Month
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP
+	~	Month [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 1
+	~	Month [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$-1--1--1,0,|12||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,99,0
+10,1,Input,434,281,46,20,3,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,2,48,264,278,25,15,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,3,5,2,100,0,0,22,0,192,0,-1--1--1,,1|(310,278)|
+1,4,5,1,4,0,0,22,0,192,0,-1--1--1,,1|(366,278)|
+11,5,0,338,278,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,6,Rate,338,316,75,30,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,7,Conventional GenLogisticEquation,586,525,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,8,1,7,1,0,0,0,0,192,0,-1--1--1,,1|(455,419)|
+10,9,A,536,361,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,10,K,588,371,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,11,M,649,367,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,12,beta,781,537,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,13,9,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,14,10,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,15,11,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,16,12,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,17,GenLogisticEquation Reference point,626,183,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,18,1,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,19,11,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,20,10,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,21,9,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,22,rx,635,109,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,23,ry,761,130,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,24,22,17,1,0,0,0,0,192,0,-1--1--1,,1|(621,144)|
+1,25,23,17,1,0,0,0,0,192,0,-1--1--1,,1|(718,160)|
+10,26,C,722,362,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,27,Q,793,356,75,30,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,28,26,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,29,26,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,30,27,17,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,31,27,7,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+12,32,0,1220,301,299,250,8,79,0,0,1,0,0,0,0,0,0,0,0,0
+GRAPH
+///---\\\
+:GRAPH GRAPH
+:TITLE GRAPH
+:SCALE
+:VAR Conventional GenLogisticEquation
+:VAR GenLogisticEquation Reference point
+:L<%^E!@
+1:0.vdfx
+1:.vdfx
+1:112.vdfx
+4:Time
+5:beta
+9:0
+19:99,0
+24:0
+25:100
+26:100
+23:0
+15:0,0,0,0,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:0
+96:0
+97:0
+77:0
+78:0
+102:0
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Times New Roman|12||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1

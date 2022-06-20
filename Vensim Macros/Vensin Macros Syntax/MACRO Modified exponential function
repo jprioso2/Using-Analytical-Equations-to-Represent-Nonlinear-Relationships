@@ -1,0 +1,24 @@
+:MACRO:ModExpFunction(input,a,w,alpha)
+ModExpFunction=
+a*(1-EXP(-alpha*input))+w
+	~	Conventional Modified Exponential equation
+	~	input independent variable
+		a parameter 
+		w parameter
+		alpha growth rate
+	|
+
+:END OF MACRO:
+
+:MACRO:ModExpFunctionRP(input,rx,ry,a,w)
+ModExpFunctionRP=
+a*(1-(((a+w-ry)/(a))^(input/rx)))+w
+	~	Version of Modified Exponential equation with reference point
+	~	input independent variable
+		a parameter 
+		w parameter
+		rx reference point x-axis
+		ry reference point y-axis
+	|
+
+:END OF MACRO:
