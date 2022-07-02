@@ -3,19 +3,19 @@ Juan Ríos-Ocampo (a, *) and Michael Shayne Gary (a)
 a UNSW Business School, University of New South Wales, Sydney NSW 2052, Australia
 *Correspondence to: Juan Ríos-Ocampo. E-mail: j.rios_ocampo@unsw.edu.au
 
-# Vensim Macros
+## Vensim Macros
 
 The folder "Vensim Macros" includes a set of Vensim DSS Macros that can be used to implement the conventional form of each analytical equation and also the version of each analytical equation with an interior reference point. 
 
-# Python script to implement our procedure for using analytical functions to formulate nonlinear relationships 
+## Python script to implement our procedure for using analytical functions to formulate nonlinear relationships 
 
 This supplementary appendix explains how to replace an existing table function using one of the six analytical equations discussed in the main manuscript using a Python 3 script we wrote specifically for this task. The script for conducting this analysis is attached in the supplementary materials as: ShapeNonlinearFunction.py. Using information about an existing table function, the script helps identify the analytical equation with an internal reference point (r_x, r_y) that best represents the nonlinear relationship. Note that judgment is always required to interpret the results and select the most appropriate analytical equation.
 	The script estimates the best-fitting values for each of the six analytical equations based on the Sum of Square Error (SSE) statistics and Root-mean-square error (RMSE). If an analytical function is undefined for any of the existing table function values (i.e., x values, minimum and maximum y-axis values, or interior reference value), that analytical equation is not included in the estimations. After the estimations, the script reports the SSE and RMSE for each analytical equation and identifies the equation with the lowest RMSE. The script also draws a graph showing all of the estimated curves along with the original table function. Follow the instructions below to run the code using the World Dynamics model as a demonstration of how to use the Python script.
 
 
-# Text file to add the inputs:
+### Text file to add the inputs:
 
-#1#. Create a text file (with .txt file extension) for each table function that you want to represent using an analytical equation. Save the text file as "Input1.txt". If you want to evaluate more than one table function at the same time, use sequential numbers after "Input" without a space as: Input1, Input2, Input3 and so on. Each text file must include the following column header names in row 1 (include only the text after the colon for each column and where the columns are separated by one tab - Tab delimited text file).
+1. Create a text file (with .txt file extension) for each table function that you want to represent using an analytical equation. Save the text file as "Input1.txt". If you want to evaluate more than one table function at the same time, use sequential numbers after "Input" without a space as: Input1, Input2, Input3 and so on. Each text file must include the following column header names in row 1 (include only the text after the colon for each column and where the columns are separated by one tab - Tab delimited text file).
 • Column1: x
 • Column2: y
 • Column3: reference_point_x_value
@@ -29,7 +29,7 @@ See the text files for the table functions of the World Dynamics model as exampl
 3. In the text file add the x-values and y-values in the corresponding columns (x and y). Additionally, enter the reference point X value and Y value in the corresponding columns (reference_point_x_value and reference_point_y_value). Finally, add the number of graphs you want to display. The maximun number of graphs to display is 6 if all of the analytical equations are feasible. You can leave this value empty or add 0 to display all feasible analytical equations. Ensure you do not have any extra empty rows after the last value in the text file; check that the previous rows only contain the final value of your table function. Save each change made in the text file. 
 
 
-# Run the code and then respond to prompts for information when running the code:
+### Run the code and then respond to prompts for information when running the code:
 4. Run the script to generate the results. By default the code estimates and reports results for all feasible analytical equations. However, if you want to display the results of only the best fitting analytical funtions, you can indicate the number (between 1 and 6) of analytical fuctions to display in column5 of each text input file. In addition, to display the results of only the best fitting analytical functions per each table funcion, you can activate lines 509-513 of the code by eliminating the # at the beginning of each of these lines (but be sure to maintain the indentations).
 
 	If you activate lines 509-513 of the code, the code will display the next prompt by each table function asks you to: “Graph and results to display from the smallest RMSE to the largest RMSE. Select one number between 1 and 6:”. This prompt asks you to select how many graphs and results to display based on the set of analytical equations that meet the constraints determined from the information entered in the previous steps. The range of values displayed in this prompt is determined by how many of the six analytical equations meet the constraints. If you enter 1, then only the graph and estimation results for the best fitting analytical equation – determined by the lowest RMSE – will be displayed. If you enter the maximum value included in the prompt, in this case 6, then the graph and estimation results for all of the analytical equations that meet the constraints will be displayed. In general, we recommend displaying the results for all of the analytical equations that meet the constraints. Enter a number within the range provided in the prompt and then press Return.
