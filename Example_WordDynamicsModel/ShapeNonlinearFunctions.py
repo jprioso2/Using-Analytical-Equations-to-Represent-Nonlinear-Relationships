@@ -43,7 +43,7 @@ Run the code and respond to prompts for information:
     can indicate the number (between 1 and 6) of analytical fuctions to display 
     in column5 of each text input file. Alternatively, to display the results of 
     only the best fitting analytical functions for each table funcion, you can 
-    activate lines 509-513 of the code by eliminating the # at the beginning of 
+    activate lines 508-512 of the code by eliminating the # at the beginning of 
     each of these lines (but be sure to maintain the indentations).
     
     If you activate lines 508-512 of the code, the code will display the 
