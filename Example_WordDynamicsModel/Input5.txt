@@ -1,7 +1,0 @@
-x	y	reference_point_x_value	reference_point_y_value
-0	1.2	1	1
-1	1		
-2	0.85		
-3	0.75		
-4	0.7		
-5	0.7
