@@ -24,7 +24,7 @@ This supplementary appendix explains how to replace an existing table function u
 
 See the text files for the table functions of the World Dynamics model as examples.
 
-2. Save the text file in the same location (i.e., folder) as the Python script. Include the file path in line 132 of the code and add r before the path. For instance, "dir_path = r"C:\Users\". 
+2. Save the text file in the same location (i.e., folder) as the Python script. Include the file path in line 132 of the code between double quotation marks (“ “) and add r before the path. For instance, "dir_path = r"C:\Users\". 
 
 3. In the text file add the x-values and y-values in the corresponding columns (x and y). Additionally, enter the reference point X value and Y value in the corresponding columns (reference_point_x_value and reference_point_y_value). Finally, add the number of graphs you want to display. The maximun number of graphs to display is 6 if all of the analytical equations are feasible. You can leave this value empty or add 0 to display all feasible analytical equations. Ensure you do not have any extra empty rows after the last value in the text file; check that the previous rows only contain the final value of your table function. Save each change made in the text file. 
 
