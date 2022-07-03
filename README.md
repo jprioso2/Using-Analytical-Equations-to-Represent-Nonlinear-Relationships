@@ -18,9 +18,13 @@ The script estimates the best-fitting values for each of the six analytical equa
 1. Create a text file (with .txt file extension) for each table function that you want to represent using an analytical equation. Save the text file as "Input1.txt". If you want to evaluate more than one table function at the same time, use sequential numbers after "Input" without a space as: Input1, Input2, Input3 and so on. Each tab delimited text file must include the following column header names in row 1 (include only the text after the colon for each column, where the columns are separated by one tab).
 
 • Column1: x
+
 • Column2: y
+
 • Column3: reference_point_x_value
+
 • Column4: reference_point_y_value
+
 • Column5 (optional): graphs_to_display (graphs to display between 1 and 6 put zero to display all feasible analytical equations)
 
 See the text files for the table functions of the World Dynamics model as examples.
