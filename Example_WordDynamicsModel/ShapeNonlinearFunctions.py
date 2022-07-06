@@ -126,7 +126,7 @@ import fnmatch
 
 """ Identify number of Inputs (tables funtions) in the folder. 
 Include the file path in line 132 of the code between double quotation marks 
-(“ “) and add r before the path. For instance, "dir_path = r"C:\Users\".
+(“ “) and add r before the path. For instance, "dir_path = r"C:\".
 """
 
 dir_path = r"C:\" 
